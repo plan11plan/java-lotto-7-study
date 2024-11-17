@@ -69,8 +69,21 @@ public class ConsoleInputView {
        return prizeLottos;
     }
 
+    /**
+     *  보너스 번호
+     *  [자동x] 보너스 번호는 1개뿐이여야 합니다.
+     *  - 로또 번호는 서로 중복될 수 없습니다.
+     *  - 보너스 번호와 당첨번호는 서로 중복될 수 없습니다.
+     *  [x] 로또 번호의 숫자 범위는 1~45까지 입니다.
+     */
+
     public int requestBonusLotto() {
-        return 0;
+        int bonusLotto = Integer.parseInt(consoleRead());
+        Validator
+                .check(isNumberInRange(bonusLotto,LOTTO_MIN_VALUE.getCriteria(), LOTTO_MAX_VALUE.getCriteria()))
+                .withError(new IllegalArgumentException(INVALID_LOTTO_RANGE.getMessage()))
+                .validate();
+        return bonusLotto;
     }
 
     private String consoleRead(){
