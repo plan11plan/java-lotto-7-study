@@ -1,8 +1,7 @@
 package lotto.controller.execute;
 
 import java.util.List;
-import lotto.controller.ConsoleInputView;
-import lotto.controller.ConsoleOutputView;
+import lotto.controller.view.ConsoleInputView;
 import lotto.domain.prizeMachine.PickedWinnerLottos;
 
 public class PickWinnerLottoController {

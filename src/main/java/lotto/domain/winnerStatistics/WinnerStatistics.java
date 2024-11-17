@@ -1,7 +1,7 @@
 package lotto.domain.winnerStatistics;
 
-import lotto.controller.ConsoleInputView;
-import lotto.controller.ConsoleOutputView;
+import lotto.controller.view.ConsoleInputView;
+import lotto.controller.view.ConsoleOutputView;
 import lotto.domain.prizeMachine.PickedWinnerLottos;
 
 public class WinnerStatistics {

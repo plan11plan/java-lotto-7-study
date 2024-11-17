@@ -1,6 +1,8 @@
 package lotto.controller;
 
 import lotto.controller.tool.RandomLottoNumberGenerator;
+import lotto.controller.view.ConsoleInputView;
+import lotto.controller.view.ConsoleOutputView;
 import lotto.domain.lottoMachine.PickedLottos;
 import lotto.domain.prizeMachine.PickedWinnerLottos;
 import lotto.controller.execute.CompileWinnerController;

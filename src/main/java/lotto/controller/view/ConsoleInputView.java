@@ -1,4 +1,4 @@
-package lotto.controller;
+package lotto.controller.view;
 
 import static camp.nextstep.edu.missionutils.Console.readLine;
 import static lotto.common.ErrorMessage.*;

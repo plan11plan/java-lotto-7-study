@@ -1,7 +1,7 @@
 package lotto.controller.execute;
 
-import lotto.controller.ConsoleInputView;
-import lotto.controller.ConsoleOutputView;
+import lotto.controller.view.ConsoleInputView;
+import lotto.controller.view.ConsoleOutputView;
 import lotto.controller.tool.LottoNumberGenerator;
 import lotto.domain.lottoMachine.LottoMachine;
 import lotto.domain.lottoMachine.PickedLottos;

@@ -1,5 +1,6 @@
-package lotto.controller;
+package lotto.controller.view;
 
+import lotto.controller.view.Regrex;
 import lotto.domain.lottoMachine.PickedLottos;
 import lotto.domain.winnerStatistics.WinnerInfo;
 
