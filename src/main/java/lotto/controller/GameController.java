@@ -16,11 +16,8 @@ public class GameController {
     }
 
     void run(){
-        // 구입 금액 입력
+        // 구입 금액 입력 -> 로또 뽑기
         int fee = inputView.requestFee();
-        outputView.responseFee(fee);
-
-        // 로또 뽑기
         PickedLottos lottos = LottoMachine.picksBy(fee);
         outputView.responsePickedLottos(lottos);
 
