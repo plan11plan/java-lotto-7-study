@@ -19,6 +19,7 @@ public class ConsoleOutputView {
     }
 
     public void responseWinnerInfo(WinnerInfo winnerInfo) {
+        System.out.println(Regrex.THREE_DASH.getValue());
 
     }
 

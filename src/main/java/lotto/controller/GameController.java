@@ -37,7 +37,7 @@ public class GameController {
         PickedWinnerLottos pickedWinnerLottos = pickWinnerLottoController.execute(inputView);
 
         // -> 당첨 계산
-        compileWinnerController.execute(inputView,outputView,pickedLottos,pickedWinnerLottos);
+        compileWinnerController.execute(outputView,pickedLottos,pickedWinnerLottos);
 
     }
 }

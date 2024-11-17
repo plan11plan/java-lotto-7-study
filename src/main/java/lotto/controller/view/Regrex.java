@@ -5,7 +5,8 @@ public enum Regrex {
     OPEN_SQUARE_BRACKET("["),
     CLOSE_SQUARE_BRACKET("]"),
     COMMA(","),
-    COMMA_WITH_SPACE(", ");
+    COMMA_WITH_SPACE(", "),
+    THREE_DASH("---");
 
     private final String value;
 
