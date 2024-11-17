@@ -1,6 +1,8 @@
 package lotto.domain.lottoMachine;
 
 import java.util.List;
+import lotto.domain.prizeMachine.PickedWinnerLottos;
+import lotto.domain.prizeMachine.PrizeLotto;
 
 public class Lotto {
     private final List<Integer> numbers;
@@ -24,4 +26,15 @@ public class Lotto {
                 .replace("]", "");
     }
 
+
+
+    public MatchResult matchCount(final PickedWinnerLottos winnerLottos) {
+        // 이렇게 매치되는 것을 카운트 하는거 새로 배움.
+        int matchCount = (int) numbers.stream()
+                .filter(winnerLottos.getPrizeLotto()::contains)
+                .count();
+        boolean hasBonus = numbers.contains(winnerLottos.getBonusLotto());
+
+        return new MatchResult(matchCount,hasBonus);
+    }
 }

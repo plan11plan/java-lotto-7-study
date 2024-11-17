@@ -28,7 +28,7 @@ public class GameController {
     }
 
 
-    void run(){
+    public void run(){
         // 구입 금액 입력 -> 로또 뽑기
         PickedLottos pickedLottos = pickLottoController.execute(inputView,outputView);
 

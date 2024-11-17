@@ -11,8 +11,8 @@ public class PrizeLotto {
     public boolean hasNumber(int number){
         return prizeLotto.contains(number);
     }
-    public List<Integer> getPrizeLotto() {
-        return prizeLotto;
-    }
 
+    public boolean contains(int number) {
+        return prizeLotto.contains(number);
+    }
 }
