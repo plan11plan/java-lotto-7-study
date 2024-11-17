@@ -15,4 +15,7 @@ public class PickedLottos {
         return lottos.size();
     }
 
+    public List<Lotto> getLottos() {
+        return lottos;
+    }
 }
