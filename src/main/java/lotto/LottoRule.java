@@ -2,6 +2,7 @@ package lotto;
 
 public enum LottoRule {
 
+    LOTTO_SIZE(6),
     BUY_MIN_PRICE(1000),
     BUY_MAX_PRICE(10_000),
     LOTTO_PRICE(1000),
