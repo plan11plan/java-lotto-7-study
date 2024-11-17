@@ -10,4 +10,9 @@ public class PickedLottos {
                 .map(Lotto::new)
                 .toList();
     }
+
+    public int getLottoSize(){
+        return lottos.size();
+    }
+
 }

@@ -9,10 +9,13 @@ public class ConsoleOutputView {
     }
 
     public void responsePickedLottos(PickedLottos lottos) {
+        System.out.println(lottos.getLottoSize());
+
 
     }
 
     public void responseWinnerInfo(WinnerInfo winnerInfo) {
 
     }
+
 }
