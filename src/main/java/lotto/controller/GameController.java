@@ -1,8 +1,8 @@
 package lotto.controller;
 
+import lotto.controller.tool.RandomLottoNumberGenerator;
 import lotto.domain.lottoMachine.PickedLottos;
 import lotto.domain.prizeMachine.PickedWinnerLottos;
-import lotto.domain.winnerStatistics.WinnerInfo;
 import lotto.controller.execute.CompileWinnerController;
 import lotto.controller.execute.PickLottoController;
 import lotto.controller.execute.PickWinnerLottoController;
@@ -18,7 +18,9 @@ public class GameController {
     public GameController() {
         this.inputView = new ConsoleInputView();
         this.outputView = new ConsoleOutputView();
-        this.pickLottoController = new PickLottoController();
+        this.pickLottoController = new PickLottoController(
+                new RandomLottoNumberGenerator()
+        );
         this.pickWinnerLottoController = new PickWinnerLottoController();
         this.compileWinnerController = new CompileWinnerController();
     }
