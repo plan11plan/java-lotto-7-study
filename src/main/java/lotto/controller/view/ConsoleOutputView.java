@@ -24,7 +24,6 @@ public class ConsoleOutputView {
         System.out.println(Regrex.THREE_DASH.getValue());
 
         printPrizeStatistics(winnerInfo.matchResult());
-        printTotalPrizeAmount(winnerInfo.matchResult());
 
         printEarningProfit(winnerInfo.earningRate());
 
@@ -52,22 +51,19 @@ public class ConsoleOutputView {
 
     private void printPrizeResult(PrizeEnum prize, int count) {
         if (prize == PrizeEnum.SECOND) {
-            System.out.printf("5개 일치, 보너스 볼 일치 (%,d원) - 총 %d개\n",
+            System.out.printf("5개 일치, 보너스 볼 일치 (%,d원) - %d개\n",
                     prize.getPrizeAmount(),
                     count
             );
             return;
         }
 
-        System.out.printf("%d개 일치 (%,d원) - 총 %d개\n",
+        System.out.printf("%d개 일치 (%,d원) - %d개\n",
                 prize.getMatchPrizeCount(),
                 prize.getPrizeAmount(),
                 count
         );
     }
 
-    private void printTotalPrizeAmount(MatchResult result) {
-        System.out.printf("총 당첨 금액은 %,d원입니다.\n", result.getTotalPrizeAmount());
-    }
 
 }
