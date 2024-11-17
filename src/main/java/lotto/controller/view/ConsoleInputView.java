@@ -32,10 +32,15 @@ public class ConsoleInputView {
      * -[x] 로또 가격은 1,000원 ~ 10,000원 까지 입니다.
      * -[x] 로또 가격은 1,000원 단위 입니다.
      */
+    public static void main(String[] args) {
+        int i = new ConsoleInputView().requestFee();
+        System.out.println(i);
+    }
     public int requestFee() {
+        System.out.println("구입금액을 입력해 주세요.");
         int fee = Integer.parseInt(consoleRead());
         Validator
-                .check(isNumberInRange(fee, BUY_MIN_PRICE.getCriteria(), BUY_MAX_PRICE.getCriteria()))
+                .check(!isNumberInRange(fee, BUY_MIN_PRICE.getCriteria(), BUY_MAX_PRICE.getCriteria()))
                 .withError(new IllegalArgumentException(INVALID_LOTTO_UNIT_RANGE.getMessage()))
 
                 .check((fee % 1000) != 0)
@@ -52,6 +57,7 @@ public class ConsoleInputView {
      *  - 로또 번호는 서로 중복될 수 없습니다.
      */
     public List<Integer> requestPrizeLottos() {
+        System.out.println("당첨 번호를 입력해 주세요."+System.lineSeparator());
         List<Integer> prizeLottos = Arrays.stream(consoleRead().trim().split(DELIMITER_COMMA))
                 .map(Integer::parseInt)
                 .toList();
@@ -59,7 +65,7 @@ public class ConsoleInputView {
                 .check(prizeLottos.size() != LOTTO_SIZE.getCriteria())
                 .withError(new IllegalArgumentException(INVALID_LOTTO_COUNT.getMessage()))
 
-                .check(isNumberInRange(prizeLottos, LOTTO_MIN_VALUE.getCriteria(), LOTTO_MAX_VALUE.getCriteria()))
+                .check(!isNumberInRange(prizeLottos, LOTTO_MIN_VALUE.getCriteria(), LOTTO_MAX_VALUE.getCriteria()))
                 .withError(new IllegalArgumentException(INVALID_LOTTO_RANGE.getMessage()))
 
                 .check(new HashSet<>(prizeLottos).size() != LOTTO_SIZE.getCriteria())
@@ -76,9 +82,10 @@ public class ConsoleInputView {
      */
 
     public int requestBonusLotto() {
+        System.out.println("보너스 번호를 입력해 주세요.");
         int bonusLotto = Integer.parseInt(consoleRead());
         Validator
-                .check(isNumberInRange(bonusLotto,LOTTO_MIN_VALUE.getCriteria(), LOTTO_MAX_VALUE.getCriteria()))
+                .check(!isNumberInRange(bonusLotto,LOTTO_MIN_VALUE.getCriteria(), LOTTO_MAX_VALUE.getCriteria()))
                 .withError(new IllegalArgumentException(INVALID_LOTTO_RANGE.getMessage()))
                 .validate();
         return bonusLotto;
