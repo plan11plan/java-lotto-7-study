@@ -10,11 +10,14 @@ public class BonusLotto {
         this.value = value;
     }
 
-    public BonusLotto of(int value, PrizeLotto prizeLotto){
+    public static BonusLotto of(int value, PrizeLotto prizeLotto){
         Validator.check(prizeLotto.hasNumber(value))
                 .withError(new IllegalArgumentException(ErrorMessage.INVALID_BONUS_NUMBER_DUPLICATE.getMessage()))
                 .validate();
         return new BonusLotto(value);
     }
 
+    public int getValue() {
+        return value;
+    }
 }

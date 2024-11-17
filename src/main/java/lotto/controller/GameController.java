@@ -32,7 +32,7 @@ public class GameController {
 
 
         // 당첨 번호 입력, 보너스 번호 입력 -> 당첨 번호 생성
-        PickedWinnerLottos pickedWinnerLottos = pickWinnerLottoController.execute(inputView,outputView);
+        PickedWinnerLottos pickedWinnerLottos = pickWinnerLottoController.execute(inputView);
 
         // -> 당첨 계산
         compileWinnerController.execute(inputView,outputView,pickedLottos,pickedWinnerLottos);
