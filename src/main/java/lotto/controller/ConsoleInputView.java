@@ -1,15 +1,14 @@
-package lotto;
+package lotto.controller;
 
 import static camp.nextstep.edu.missionutils.Console.readLine;
-import static lotto.ErrorMessage.*;
-import static lotto.LottoRule.*;
+import static lotto.common.ErrorMessage.*;
+import static lotto.common.LottoRule.*;
 import static 템플릿_가져온것들.util.RangeValidator.*;
 
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import 템플릿_가져온것들.if_throw.common.validation.Validator;
-import 템플릿_가져온것들.util.RangeValidator;
 
 /**
  * ## 입력

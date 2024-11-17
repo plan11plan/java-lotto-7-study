@@ -1,5 +1,6 @@
-package lotto;
+package lotto.domain.prizeMachine;
 
+import lotto.common.ErrorMessage;
 import 템플릿_가져온것들.if_throw.common.validation.Validator;
 
 public class BonusLotto {

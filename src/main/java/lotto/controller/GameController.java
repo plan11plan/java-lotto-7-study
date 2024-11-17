@@ -1,6 +1,10 @@
-package lotto;
+package lotto.controller;
 
 import java.util.List;
+import lotto.domain.lottoMachine.LottoMachine;
+import lotto.domain.lottoMachine.PickedLottos;
+import lotto.domain.winnerStatistics.WinnerInfo;
+import lotto.domain.winnerStatistics.WinnerStatistics;
 
 public class GameController {
     private final ConsoleInputView inputView;

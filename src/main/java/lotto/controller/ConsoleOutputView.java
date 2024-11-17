@@ -1,4 +1,7 @@
-package lotto;
+package lotto.controller;
+
+import lotto.domain.lottoMachine.PickedLottos;
+import lotto.domain.winnerStatistics.WinnerInfo;
 
 public class ConsoleOutputView {
     public void responseFee(int fee) {

@@ -1,4 +1,4 @@
-package lotto;
+package lotto.common;
 
 public enum ErrorMessage {
     // 로또 가격
